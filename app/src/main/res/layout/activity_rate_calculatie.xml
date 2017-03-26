@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/every"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:text="每"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Spinner
+        android:id="@+id/frequency"
+        android:layout_toRightOf="@id/every"
+        android:layout_alignTop="@id/every"
+        android:entries="@array/f_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </Spinner>
+
+    <TextView
+        android:id="@+id/save"
+        android:text="投资"
+        android:layout_toRightOf="@id/frequency"
+        android:layout_alignTop="@id/frequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/money"
+        android:layout_toRightOf="@id/save"
+        android:layout_alignTop="@id/save"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
