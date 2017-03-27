@@ -22,7 +22,7 @@
     <Spinner
         android:id="@+id/frequency"
         android:layout_toRightOf="@id/every"
-        android:layout_alignTop="@id/every"
+        android:layout_alignBaseline="@id/every"
         android:entries="@array/f_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -32,14 +32,14 @@
         android:id="@+id/save"
         android:text="投资"
         android:layout_toRightOf="@id/frequency"
-        android:layout_alignTop="@id/frequency"
+        android:layout_alignBaseline="@id/every"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <EditText
         android:id="@+id/money"
         android:layout_toRightOf="@id/save"
-        android:layout_alignTop="@id/save"
+        android:layout_alignBaseline="@id/every"
         android:layout_width="120dp"
         android:layout_height="wrap_content" />
 
@@ -63,6 +63,30 @@
         android:id="@+id/rate_o"
         android:text="%"
         android:layout_toRightOf="@id/rate_input"
+        android:layout_alignBaseline="@id/rate"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/round_time"
+        android:text="周期"
+        android:layout_alignBaseline="@id/rate"
+        android:layout_toRightOf="@id/rate_o"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/time_number"
+        android:hint="时间"
+        android:layout_toRightOf="@id/round_time"
+        android:layout_alignBaseline="@id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/round_o"
+        android:text="年"
+        android:layout_toRightOf="@id/time_number"
         android:layout_alignBaseline="@id/rate"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
