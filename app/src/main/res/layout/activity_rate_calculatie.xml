@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.AppBarOverlay" />
 
     <TextView
         android:id="@+id/every"
+        android:layout_below="@id/toolbar"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="15dp"
         android:text="每"
@@ -35,4 +44,56 @@
         android:layout_height="wrap_content" />
 
 
+    <TextView
+        android:id="@+id/rate"
+        android:text="利率"
+        android:layout_below="@id/every"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/rate_input"
+        android:hint="利率"
+        android:layout_toRightOf="@id/rate"
+        android:layout_alignBaseline="@id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/rate_o"
+        android:text="%"
+        android:layout_toRightOf="@id/rate_input"
+        android:layout_alignBaseline="@id/rate"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:text="计算"
+        android:layout_below="@id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/investment_money"
+        android:layout_below="@id/calculate"
+        android:text="本金：？？？"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/total_money"
+        android:text="总收益：？？？"
+        android:layout_below="@id/investment_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/total_rate"
+        android:text="收益率：？%"
+        android:layout_below="@id/total_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </RelativeLayout>
