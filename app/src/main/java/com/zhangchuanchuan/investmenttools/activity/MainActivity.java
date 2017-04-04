@@ -91,7 +91,7 @@ public class MainActivity extends BaseActivity
 
         } else if (id == R.id.nav_manage) {
             Intent intent = new Intent();
-            intent.setClass(this, ToolsListAdapter.class);
+            intent.setClass(this, ToolListActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_share) {
 
