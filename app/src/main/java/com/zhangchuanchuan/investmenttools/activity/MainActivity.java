@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.zhangchuanchuan.investmenttools.R;
+import com.zhangchuanchuan.investmenttools.adapter.ToolsListAdapter;
 
 public class MainActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -90,7 +91,7 @@ public class MainActivity extends BaseActivity
 
         } else if (id == R.id.nav_manage) {
             Intent intent = new Intent();
-            intent.setClass(this, RateCalculateActivity.class);
+            intent.setClass(this, ToolsListAdapter.class);
             startActivity(intent);
         } else if (id == R.id.nav_share) {
 
