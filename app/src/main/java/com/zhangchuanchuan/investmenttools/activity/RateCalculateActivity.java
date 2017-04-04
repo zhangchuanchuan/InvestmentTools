@@ -66,7 +66,7 @@ public class RateCalculateActivity extends BaseActivity {
             int investMoney = (Integer.valueOf(money.getText().toString())) * times;
             double allMoney = (investMoney/times) * allRate ;
             investmentMoney.setText("总投：" + investMoney + "元");
-            totalRate.setText("收益率：" + (allMoney/investMoney) * 100 + "%");
+            totalRate.setText("收益率：" + (allMoney/investMoney - 1) * 100 + "%");
             totalMoney.setText("总得：" + allMoney + "");
         } catch (Exception e) {
             investmentMoney.setText(e.toString());
