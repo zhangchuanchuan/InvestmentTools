@@ -15,6 +15,7 @@ import java.util.List;
 
 /**
  * Created by zhangchuanchuan on 17-4-4.
+ * 适配器
  */
 
 public class ToolsListAdapter extends RecyclerView.Adapter<ToolsListAdapter.ViewHolder> {
@@ -49,7 +50,7 @@ public class ToolsListAdapter extends RecyclerView.Adapter<ToolsListAdapter.View
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mDataList.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
