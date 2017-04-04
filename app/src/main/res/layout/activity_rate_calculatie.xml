@@ -5,7 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <TextView
         android:id="@+id/every"
-        android:layout_below="@id/toolbar"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="15dp"
         android:text="每"
