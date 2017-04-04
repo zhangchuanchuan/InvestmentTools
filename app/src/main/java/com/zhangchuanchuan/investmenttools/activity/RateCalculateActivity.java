@@ -59,16 +59,16 @@ public class RateCalculateActivity extends BaseActivity {
 
     private void calculate() {
         try {
-            double yearRate = Double.valueOf(rate.getText().toString());
+            double yearRate = Double.valueOf(rate.getText().toString()) / 100;
             int times = Integer.valueOf(time.getText().toString());
             double allRate = RateCalculateUtils.getAllRate(yearRate, times);
 
             int investMoney = (Integer.valueOf(money.getText().toString())) * times;
-            investmentMoney.setText(investMoney);
+            investmentMoney.setText(investMoney + "");
             totalRate.setText(allRate * 100 + "");
             totalMoney.setText(investMoney * allRate + "");
         } catch (Exception e) {
-            investmentMoney.setText("输入有误");
+            investmentMoney.setText(e.toString());
         }
     }
 
